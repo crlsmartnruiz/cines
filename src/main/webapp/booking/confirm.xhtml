@@ -24,12 +24,18 @@
                     <c:otherwise>
                         <h2>¿Confirmar?</h2>
                         <h:form>
+                            <p:messages showDetail="true"/>
                             Película: #{booking.movieName}<p/>
                             Hora de inicio: #{booking.startTime}<p/>
                             Cine: #{booking.theater}<p/>
+                            
                             <p/><p:commandButton id="next" value="Comprar" action="card"/>
+                            
                             <p:commandButton id="back" value="Atrás" action="showtimes" icon="ui-iconarrowrefresh-
                                              1-w"/>
+
+
+                            
                         </h:form>
                     </c:otherwise>
                 </c:choose>

@@ -13,6 +13,8 @@
             <ui:define name="content">
                 <h2><h:outputText value="Introduzca informacion del pago"/></h2>
                 <h:form prependId="false">
+                    <p:messages></p:messages>
+                    
                     <h:panelGrid columns="3" id="grid">
                         <p:outputLabel for="precio" value="Precio"/>
                         <p:inputNumber id="precio" value="#{booking.precio}" required="true" decimalSeparator=","
@@ -30,7 +32,14 @@
                             <f:convertDateTime pattern="MM/yyyy"/>
                         </p:inputText>
                         <p:message for="fecha"/>
+                        
+                        
+
+                        
                     </h:panelGrid>
+                    
+                    <p:captcha id="captcha" required="true"></p:captcha>
+                    <p:message for="captcha"/>
                     <p/><p:commandButton id="next" value="Confirmar" action="print" update="grid"/>
                     <p:commandButton id="back" value="Atrás" action="confirm" icon="ui-icon-arrowrefresh-1-w"
                                      immediate="true"/>
