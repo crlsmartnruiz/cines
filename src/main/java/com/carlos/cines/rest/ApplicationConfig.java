@@ -29,6 +29,8 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(com.carlos.cines.json.MovieReader.class);
+        resources.add(com.carlos.cines.json.MovieWriter.class);
         resources.add(com.carlos.cines.rest.MovieFacadeREST.class);
         resources.add(com.carlos.cines.rest.PointsFacadeREST.class);
         resources.add(com.carlos.cines.rest.SalesFacadeREST.class);
